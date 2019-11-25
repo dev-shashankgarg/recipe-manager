@@ -1,0 +1,36 @@
+{
+  "name": "recipe-manager",
+  "version": "1.0.0",
+  "description": "Recipe Management Application",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=production" ,
+    "start": "webpack-dev-server --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-shashankgarg/recipe-manager.git"
+  },
+  "keywords": [
+    "js",
+    "webpack",
+    "recipe"
+  ],
+  "author": "dev-shashankgarg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-shashankgarg/recipe-manager/issues"
+  },
+  "homepage": "https://github.com/dev-shashankgarg/recipe-manager#readme",
+  "dependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.4.2",
+    "regenerator-runtime": "^0.13.3",
+    "uuid": "^3.3.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
