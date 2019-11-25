@@ -6,7 +6,7 @@ const generateIngSummaryText = (count , total) => {
     if(count === 0){
         return `You have no ingredients !!`
     }
-    return `You have some ingredients !! Ingredients left: (${count})`
+    return `You have some ingredients !! Ingredients left: (${total-count})`
 } 
 
 const generateIngSummaryColor = (count , total) => {
@@ -16,7 +16,7 @@ const generateIngSummaryColor = (count , total) => {
     if(count === 0){
         return `red`
     }
-    return `yellow`
+    return `#FFC30B`
 }
 
 const createRecipeLink = ({id , title , ingredients}) => {
@@ -31,10 +31,10 @@ const createRecipeLink = ({id , title , ingredients}) => {
     const recipeIngredientSummary = document.createElement('p')
     recipeIngredientSummary.className = 'recipe-listing-ingredient-summary'
     
-    const ingredientMissing = ingredients.filter(ingredient => !ingredient.isAvailable).length
+    const ingredientAvailable = ingredients.filter(ingredient => ingredient.available).length
 
-    recipeIngredientSummary.textContent = generateIngSummaryText(ingredientMissing , ingredients.length)
-    recipeIngredientSummary.style.color = generateIngSummaryColor(ingredientMissing, ingredients.length)
+    recipeIngredientSummary.textContent = generateIngSummaryText(ingredientAvailable , ingredients.length)
+    recipeIngredientSummary.style.color = generateIngSummaryColor(ingredientAvailable, ingredients.length)
 
     recipeLinkDiv.appendChild(recipeTitle)
     recipeLinkDiv.appendChild(recipeIngredientSummary)

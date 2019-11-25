@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./assets/recipe.png" rel="ICON">
+        <link href="./styles/styles-edit-page.css" rel="stylesheet">
+        <title>Edit/View Recipe details</title>
+    </head>
+    <body>
+        <header class="header-container">
+                <h1>Edit / View Recipe</h1>
+                <p>Make changes to your recipe information</p>
+        </header>
+        <main>
+            <div class = 'recipe-edit-container'>
+                <div class="recipe-title-container">
+                    <input type="text" class = "title-input" id='recipe-title-input'>
+                    <button class="button-recipe-delete" id='recipe-delete-button-id'>Delete</button>
+                </div>
+                <div class="recipe-steps-container"><textarea class = "textarea-input" id='recipe-steps-area-id'></textarea></div>
+                <div class = "ingredient-container">
+                </div>
+                <div class="recipe-ingredient-addition-container">
+                    <input type="text" class = "ingredient-input" id='ingredient-input-id'><button class="button-recipe-ingredient-add" id="ingredient-add-button-id">Add Ingredient</button></div>
+            </div>
+        </main>
+        <footer class="footer-container">
+            <p>Application designed exclusively for understanding javascript<br>
+                Developed by <b>Shashank garg</b> (<a class="footer-link" href="https://github.com/dev-shashankgarg">github</a>)
+            </p>
+        </footer>
+        <script src = './scripts/view-bundle.js'></script>
+    </body>
+</html>
