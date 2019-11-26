@@ -19,7 +19,7 @@ npm install
 npm run start
 ```
 
-4. DEMO Link (netlify)
+## DEMO Link (netlify)
 
 [recipe-manager](https://shashank-recipe-manager.netlify.com/)
 
