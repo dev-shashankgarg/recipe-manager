@@ -89,7 +89,6 @@ const updateIngredient = (recipeId , ingredientId , {available}) => {
         const foundIngredient = findIngredient(ingredientId ,foundRecipe.ingredients )
         if(foundIngredient){
             foundIngredient.available = available
-            console.log(foundIngredient)
             saveAllRecipes()
         }
     }

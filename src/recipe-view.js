@@ -37,3 +37,21 @@ document.querySelector('#recipe-steps-area-id').addEventListener('input', (event
     removeRecipe(recipeId)
     location.assign('/')
  })
+
+ window.addEventListener('storage' , (event) => {
+    const newRecipeData = event.newValue
+    const recipes = JSON.parse(newRecipeData)
+    
+    const recipeId = location.hash.substring(1)
+    const foundRecipe = recipes.find(recipe => recipe.id === recipeId)
+
+    if(!foundRecipe) {
+        location.assign('/')
+    }
+
+    renderIngredients(recipeId)
+
+    document.querySelector('#recipe-title-input').value = foundRecipe.title
+    document.querySelector('#recipe-steps-area-id').value = foundRecipe.description
+
+ })
